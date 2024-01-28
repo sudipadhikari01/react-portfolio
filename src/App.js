@@ -13,6 +13,8 @@ import Notfound from "./pages/404";
 import { TRACKING_ID } from "./data/tracking";
 import "./App.css";
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 function App() {
 	useEffect(() => {
 		if (TRACKING_ID !== "") {

@@ -2,7 +2,7 @@
 		main: {
 			title: "Reactfolio by Sudip",
 			name: "Sudip Adhikari",
-			email: "sudip.adhikari01@gmail.com",
+			email: "sudip.adhikari247@gmail.com",
 			logo: "../logo.png",
 		},
 
@@ -22,9 +22,9 @@
 		},
 
 		about: {
-			title: "I’m a passionate Java developer with 5 years of experience. I have worked in business domains like Ecommerce, Lottery System, Broker System and Travel and Tour System. I’ve strong foundation of Java, Spring boot, JPA, hibernate, PostgreSQL, microservices and React.  I can work well with both Front end and backend. But during my career I was more aligned to backend. Like 80% backend and 20% frontend. I have also collaborated with DevOps team and QA for the better quality of product. Apart from that I’m also a quick problem solver, highly motivated and good communicator so, I will always collaborate well with my coworkers. So, I’m confident my skills and expertise will fit what you are looking for. ",
+			title: "Senior Fullstack Java Developer ",
 			description:
-				"I've worked on a variety of projects over the years and I'm proud of the progress I've made. Many of these projects are open-source and available for others to explore and contribute to. If you're interested in any of the projects I've worked on, please feel free to check out the code and suggest any improvements or enhancements you might have in mind. Collaborating with others is a great way to learn and grow, and I'm always open to new ideas and feedback.",
+				"I’m a passionate Java developer with 5 years of experience. I have worked in business domains like Ecommerce, Lottery System, Broker System and Travel and Tour System. I’ve strong foundation of Java, Spring boot, JPA, hibernate, PostgreSQL, microservices and React.  I can work well with both Front end and backend. But during my career I was more aligned to backend. Like 80% backend and 20% frontend. I have also collaborated with DevOps team and QA for the better quality of product. Apart from that I’m also a quick problem solver, highly motivated and good communicator so, I will always collaborate well with my coworkers. So, I’m confident my skills and expertise will fit what you are looking for. If you're interested in any of the projects I've worked on, please feel free to check out the code and suggest any improvements or enhancements you might have in mind. Collaborating with others is a great way to learn and grow, and I'm always open to new ideas and feedback.",
 		},
 
 		articles: {
@@ -55,29 +55,13 @@
 			{
 				title: "Broker Management System",
 				description:
-					"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
+					"Led the development of a Broker Management System at Mandala System Pvt Ltd. Migrated from Servlets to Spring Boot, integrating Hibernate with MySQL. Developed RESTful APIs and revamped legacy projects for enhanced performance. Crafted a refined user interface with HTML, CSS, JavaScript, and jQuery. Conducted rigorous code reviews, ensuring adherence to best practices and optimal code quality.",
 				logo: "images/broker-management-image.jpeg",
 				linkText: "View Project",
 				link: "https://github.com",
-			},
+			}
 
-			{
-				title: "Project 4",
-				description:
-					"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-				logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
-				linkText: "View Project",
-				link: "https://github.com",
-			},
-
-			{
-				title: "Project 5",
-				description:
-					"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-				logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
-				linkText: "View Project",
-				link: "https://github.com",
-			},
+			
 		],
 	};
 

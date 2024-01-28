@@ -1,5 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
+
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
@@ -17,6 +20,45 @@ const Contact = () => {
 	}, []);
 
 	const currentSEO = SEO.find((item) => item.page === "contact");
+
+	const [formData, setFormData] = useState({
+        name:"",
+        email: "",
+        subject: "",
+        message : "",
+        phone: ""
+    })
+
+	const [validated, setValidated] = useState(false);
+
+	const handleSubmit = (event) => {
+	  const form = event.currentTarget;
+	  if (form.checkValidity() === false) {
+		event.preventDefault();
+		event.stopPropagation();
+	  } else {
+		event.preventDefault();
+		console.log(formData, 'form data is here');
+	  }
+  
+	  setValidated(true);
+
+
+	};
+
+    // const handleSubmit = (e) => {
+
+    //     // action={contact.contactUrl ? contact.contactUrl : "mailto:rajendramaharjan666@gmail.com"}
+    //     e.preventDefault();
+
+    //     console.log(formData, 'form data is here');
+
+
+    //   };
+
+      const handleOnChange = (e) => {
+        setFormData((prev) => ({...prev, [e.target.name] : e.target.value}))
+      }
 
 	return (
 		<React.Fragment>
@@ -71,6 +113,30 @@ const Contact = () => {
 							Thanks again for your interest, and I look forward
 							to hearing from you!
 						</div>
+					</div>
+
+					<div>
+					
+					<Form noValidate validated={validated} style={{marginTop: '40px', width: '500px'}} onSubmit={handleSubmit}> 
+						<Form.Group className="mb-3" controlId="formBasicEmail" >
+							<Form.Control type="text" placeholder="Enter name" name="name" value={formData.name} onChange={handleOnChange} required />
+						</Form.Group>
+						<Form.Group className="mb-3">
+							<Form.Control type="email" placeholder="Enter email" name="email" value={formData.email} onChange={handleOnChange} required  />
+						</Form.Group>
+						<Form.Group className="mb-3">
+							<Form.Control type="text" placeholder="Enter subject" name="subject" value={formData.subject} onChange={handleOnChange} required  />
+							</Form.Group>
+							<Form.Group className="mb-3">
+							<Form.Control type="tel" placeholder="Enter phone" name="phone" value={formData.phone} onChange={handleOnChange}  required />
+							</Form.Group>
+							<Form.Group className="mb-3">
+							<Form.Control as="textarea" placeholder="Enter Message" name="message" value={formData.message} onChange={handleOnChange} required />
+							</Form.Group>
+						<Button variant="primary" type="submit">
+							Send Message
+						</Button>
+					</Form>
 					</div>
 
 					<div className="socials-container">
