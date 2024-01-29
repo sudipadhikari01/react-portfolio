@@ -8,6 +8,10 @@ import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
 import Logo from "../components/common/logo";
 import Socials from "../components/about/socials";
+import {ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 
 import INFO from "../data/user";
 import SEO from "../data/seo";
@@ -31,17 +35,30 @@ const Contact = () => {
 
 	const [validated, setValidated] = useState(false);
 
+
+
 	const handleSubmit = (event) => {
 	  const form = event.currentTarget;
 	  if (form.checkValidity() === false) {
 		event.preventDefault();
 		event.stopPropagation();
+		setValidated(true);
+
+		
 	  } else {
 		event.preventDefault();
-		console.log(formData, 'form data is here');
+		setFormData({
+			name:"",
+			email: "",
+			subject: "",
+			message : "",
+			phone: ""
+		})
+		toast.success("Form submitted successfully!!");
+		setValidated(false);
+
 	  }
   
-	  setValidated(true);
 
 
 	};
@@ -72,6 +89,7 @@ const Contact = () => {
 			</Helmet>
 
 			<div className="page-content">
+
 				<NavBar active="contact" />
 				<div className="content-wrapper">
 					<div className="contact-logo-container">
@@ -118,6 +136,8 @@ const Contact = () => {
 					<div>
 					
 					<Form noValidate validated={validated} style={{marginTop: '40px', width: '500px'}} onSubmit={handleSubmit}> 
+					<ToastContainer />
+
 						<Form.Group className="mb-3" controlId="formBasicEmail" >
 							<Form.Control type="text" placeholder="Enter name" name="name" value={formData.name} onChange={handleOnChange} required />
 						</Form.Group>
