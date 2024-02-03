@@ -10,6 +10,7 @@ import INFO from "../data/user";
 import SEO from "../data/seo";
 
 import "./styles/about.css";
+import DownloadPDFButton from "../components/file-download/DownloadPDFButton";
 
 const About = () => {
 	useEffect(() => {
@@ -48,6 +49,8 @@ const About = () => {
 								<div className="subtitle about-subtitle">
 									{INFO.about.description}
 								</div>
+								<div style={{marginTop: '10px'}}><DownloadPDFButton/></div>
+								
 							</div>
 
 							<div className="about-left-side">
