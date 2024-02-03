@@ -9,6 +9,7 @@ import Footer from "../components/common/footer";
 import Logo from "../components/common/logo";
 import Socials from "../components/about/socials";
 import {ToastContainer, toast } from 'react-toastify';
+import axios from "axios";
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -35,43 +36,31 @@ const Contact = () => {
 
 	const [validated, setValidated] = useState(false);
 
-
-
 	const handleSubmit = (event) => {
 	  const form = event.currentTarget;
 	  if (form.checkValidity() === false) {
 		event.preventDefault();
 		event.stopPropagation();
 		setValidated(true);
-
 		
 	  } else {
 		event.preventDefault();
-		setFormData({
-			name:"",
-			email: "",
-			subject: "",
-			message : "",
-			phone: ""
+		axios.post('https://ddekwwbcew2bxwcbekqp6zrdxu0erlme.lambda-url.us-east-1.on.aws/',formData).then(data=> {
+			setFormData({
+				name:"",
+				email: "",
+				subject: "",
+				message : "",
+				phone: ""
+			})
+			toast.success("Form submitted successfully!!");
+			setValidated(false);
+		}).catch(err=>{
+			toast.error('Please try again!!');
 		})
-		toast.success("Form submitted successfully!!");
-		setValidated(false);
-
 	  }
-  
-
 
 	};
-
-    // const handleSubmit = (e) => {
-
-    //     // action={contact.contactUrl ? contact.contactUrl : "mailto:rajendramaharjan666@gmail.com"}
-    //     e.preventDefault();
-
-    //     console.log(formData, 'form data is here');
-
-
-    //   };
 
       const handleOnChange = (e) => {
         setFormData((prev) => ({...prev, [e.target.name] : e.target.value}))
