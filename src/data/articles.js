@@ -1,4 +1,4 @@
-import React from "react";
+	import React from "react";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
@@ -18,7 +18,7 @@ function article_1() {
 
 	return {
 		date: "03 Feb 2024",
-		title: "Building a Serverless Application",
+		title: "Exploring the Power of Serverless Architecture: A Comprehensive Overview	",
 		description:
 			"Building a Serverless Application with AWS Lambda, DynamoDB, and API Gateway.",
 		keywords: [
@@ -55,18 +55,61 @@ function article_1() {
 					<div className="paragraph">
 						<div>
 							<h3>Introduction</h3>
-							<p>Serverless architecture has become a game-changer in the world of cloud computing, allowing developers to focus on writing code without the need to manage servers. In this article, we'll explore the power of serverless computing by building a simple yet scalable application using three key AWS services: AWS Lambda, DynamoDB, and API Gateway.</p>
+							<p>
+								In recent years, serverless architecture has gained significant traction in the realm of cloud computing, revolutionizing 
+								the way developers design, deploy, and manage applications. Leveraging services like Amazon S3, Lambda, API Gateway,
+								DynamoDB, Cognito, IAM, RDS, and Aurora DB, developers can build highly scalable, resilient, and cost-effective 
+								solutions without worrying about infrastructure management. In this article, we'll delve into the core components 
+								of serverless architecture and explore how each service contributes to building robust applications.
+							</p>
 						</div>
+
 						<div>
-							<h3>Serverless Components</h3>
-							<br/>
-							<h4>AWS Lambda</h4>
-							<p>AWS Lambda is a serverless compute service that lets you run your code without provisioning or managing servers. It supports a variety of programming languages, allowing you to choose the language that best fits your needs.
-								For our application, we'll use Lambda to execute functions in response to HTTP requests. Each function will perform specific tasks, such as retrieving data from DynamoDB or processing user input.</p>
-							<h4>API Gateway</h4>
-							<p>AWS API Gateway enables you to create, publish, and manage APIs securely at any scale. It acts as a front door for our serverless application, allowing us to define RESTful APIs with ease.
-								Our API Gateway will serve as the endpoint for client requests, connecting them to the corresponding Lambda functions. This enables us to expose our serverless functions as a fully functional API.</p>
+							<h3>Understanding Serverless Architecture:</h3>
+							<p>
+								At its core, serverless architecture abstracts away the underlying infrastructure, allowing developers to 
+								focus solely on writing code. Amazon S3 serves as a scalable object storage service, ideal for storing and 
+								retrieving vast amounts of data such as images, videos, and documents. Lambda, a key component of serverless 
+								computing, enables developers to run code without provisioning or managing servers. By triggering functions 
+								in response to events, Lambda facilitates event-driven and on-demand execution, offering unmatched flexibility 
+								and efficiency.
+							</p>
 						</div>
+
+						<div>
+							<h3>Integration with API Gateway and DynamoDB:</h3>
+							<p>
+								API Gateway acts as a gateway for managing and securing APIs, providing features like authentication,
+								authorization, and throttling. With API Gateway, developers can expose Lambda functions as HTTP endpoints,
+								enabling seamless integration with web and mobile applications. DynamoDB, a fully managed NoSQL database 
+								service, offers low-latency performance and automatic scaling, making it well-suited for applications requiring 
+								fast and predictable data access patterns.
+								
+							</p>			
+						</div>
+
+						<div>
+							<h3>Enhancing Security with Cognito and IAM:</h3>
+							<p>
+								Cognito simplifies user authentication and authorization for web and mobile applications, 
+								offering features like user management, multi-factor authentication, and identity federation.
+								IAM (Identity and Access Management) enables fine-grained control over access to AWS resources,
+								 allowing developers to define policies and roles to enforce security best practices.	
+							</p>			
+						</div>
+
+						<div>
+							<h3>Data Management with RDS and Aurora DB:</h3>
+							<p>
+								RDS (Relational Database Service) provides managed relational databases, supporting popular engines like MySQL, 
+								PostgreSQL, and SQL Server. With RDS, developers can offload database administration tasks such as patching, backups, 
+								and scaling, focusing on application development instead. Aurora DB, a MySQL and PostgreSQL-compatible database built 
+								for the cloud, delivers high performance, availability, and durability, making it an ideal choice for mission-critical 
+								workloads.
+
+							</p>			
+						</div>
+
 						<div style={{marginTop:'15px'}}>
 							
 							<h3>Building a Serverless Application</h3>
@@ -182,12 +225,6 @@ function article_2() {
 		  };
 		};
 	  `;
-
-	  
-	
-  
-
-	  
 
 
 	return {
@@ -352,6 +389,101 @@ function article_2() {
 	};
 }
 
-const myArticles = [article_1, article_2];
+function article_3() {
+
+	return {
+		date: "6 Feb 2024",
+		title: "Elevating Code Quality with Effective Code Review Practices in AWS Development",
+		description:
+			"Elevating Code Quality with Effective Code Review Practices in AWS Development",
+		style: ``,
+		keywords: [
+			"Artificial Intelligence in Healthcare",
+			"Sudip Adhikari",
+			"Sudip Adhikari",
+			"Sudip Adhikari",
+		],
+		body: (
+			<React.Fragment>
+				
+				<div className="article-content">
+					
+					<div className="paragraph">
+						<div>
+							<br/>
+							<h3>Introduction</h3>
+								<p>
+									In the fast-paced realm of software development, code review stands as a crucial practice for ensuring code quality, fostering collaboration, 
+									and maintaining project integrity. As a seasoned developer with extensive experience in AWS (Amazon Web Services) environments, I've witnessed 
+									firsthand the transformative impact of effective code review practices within AWS development projects. In this article, I'll share insights 
+									into the art of code review, tailored specifically for AWS projects, drawing from my own experiences and best practices in the field.
+								</p>
+						</div>
+
+						<div>
+							<h4>Understanding the Purpose of Code Review in AWS Development:</h4>
+							<p>
+								In my tenure as a lead developer on AWS projects, I've come to understand the critical role that code review plays in ensuring that applications adhere 
+								to AWS best practices and architectural principles. For instance, during a recent project migration to AWS, our team conducted thorough code reviews to 
+								validate AWS resource configurations, ensuring compliance with AWS security standards and optimizing performance. By incorporating AWS-specific considerations 
+								into the code review process, we were able to mitigate risks, enhance security, and maximize the benefits of cloud-native development.
+							 </p>
+						</div>
+
+						<div>
+							<h4>Striking the Balance Between Speed and Thoroughness in AWS Code Review:</h4>
+							<p>
+								In my role as a technical lead, I've encountered the challenge of striking the right balance between speed and thoroughness in AWS code reviews. While it's crucial to 
+								conduct thorough reviews to validate AWS resource configurations and security measures, excessive nitpicking can impede productivity and delay project timelines. 
+								To address this challenge, our team implemented automated tools for AWS resource validation and security scanning, allowing us to streamline the code review process 
+								while maintaining code quality and adherence to AWS standards.
+							 </p>
+						</div>
+
+						<div>
+							<h4>Leveraging AWS Tools and Services for Enhanced Code Review:</h4>
+							<p>
+								Throughout my career, I've leveraged various AWS tools and services to augment the code review process and enforce AWS best practices. For instance, 
+								during a recent project, we integrated AWS CodePipeline into our development workflow to automate build, test, and deployment pipelines. Additionally, 
+								we utilized AWS Config and AWS Trusted Advisor to gain insights into AWS resource configurations, compliance checks, and cost optimization recommendations, 
+								enabling us to proactively address issues during code review and ensure alignment with AWS best practices.
+							 </p>
+						</div>
+
+						<div>
+							<h4>Cultivating a Culture of Continuous Improvement in AWS Development:</h4>
+							<p>
+								In my experience, fostering a culture of continuous improvement is paramount in AWS development environments. By organizing knowledge sharing sessions on AWS best 
+								practices, conducting regular architecture reviews, and providing opportunities for AWS-focused training and certification, we empowered developers to deepen their 
+								AWS expertise and drive innovation in cloud-native solutions. This emphasis on continuous learning and improvement not only enhanced our team's capabilities but 
+								also fostered a culture of collaboration, accountability, and excellence in AWS development.
+							 </p>
+						</div>
+
+						
+
+						<div>
+							<h4>Conclusion:</h4>
+							<p>
+								In conclusion, effective code review practices are essential for ensuring code quality, security, and adherence to AWS best practices in cloud-native 
+								development. Drawing from real-world experiences and best practices, developers can incorporate AWS-specific considerations into the code review process, 
+								embrace constructive feedback, strike the right balance between speed and thoroughness, leverage AWS tools and services, and foster a culture of continuous 
+								improvement. To delve deeper into effective code review practices in AWS environments, I encourage readers to explore AWS documentation, participate in AWS 
+								training programs, and actively engage with AWS community forums and events. By embracing the art of code review in AWS development, developers can maximize 
+								the benefits of cloud-native solutions and drive innovation in the cloud.
+
+							 </p>
+						</div>
+
+						
+					</div>
+				</div>
+			</React.Fragment>
+		),
+	};
+}
+
+
+const myArticles = [article_1, article_2, article_3];
 
 export default myArticles;
